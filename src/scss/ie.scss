@@ -1,0 +1,322 @@
+// = Config
+//-----------------------------------------------------------------------------//
+
+    @import "config";
+
+
+// = Base
+//-----------------------------------------------------------------------------//
+
+@import "style";
+
+[role="search"] input { 
+    background-color:white;
+    &:hover, &:focus, &:active {
+        line-height:52px;
+            & + .button {
+                right: 7px;
+                }
+            }
+    }
+
+.home .hero h2 {
+    margin-bottom: -1px;
+    }
+
+.home h2 {
+    border-bottom: 1px solid #ddd;
+    font-size: 1.7em;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+}
+.home h2.module__header {
+    border:0 none;
+    font-size:1.05em;
+    padding-bottom:0;
+    margin-bottom:0;
+}
+
+
+.hero h1, 
+.hero h2 {
+	background: #fff;
+	display: inline-block;
+    font-size: 2em;
+    letter-spacing: -1px;
+    padding: 0 10px;
+    margin-top: 5%;
+    width: auto;
+    @media (min-width: $breakpoint-medium) {
+        font-size: 2.5em;
+        margin-top: 2.5em;
+        }
+    @media (min-width: $breakpoint-large) {
+        font-size: 3em;
+        padding: 10px 15px;
+        }
+    }
+
+.masthead__follow {
+    font-size: 1.6em !important;
+}
+
+                
+.services .landing__header {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/services.png',
+        sizingMethod='scale') !important;
+
+        -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/services.png',
+        sizingMethod='scale') !important;
+    }
+.blood-tissues-and-cells .landing__header {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/blood-tissues-and-cells.png',
+        sizingMethod='scale');
+
+        -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/blood-tissues-and-cells.png',
+        sizingMethod='scale') !important;
+    }
+
+.legal .landing__header {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/legal-services.png',
+        sizingMethod='scale');
+
+        -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/legal-services.png',
+        sizingMethod='scale') !important;
+    }
+
+.information-technology .landing__header {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/information-technology.png',
+        sizingMethod='scale');
+
+        -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/information-technology.png',
+        sizingMethod='scale') !important;
+    }
+
+.facilities .landing__header {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/facilities.png',
+        sizingMethod='scale');
+
+        -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/facilities.png',
+        sizingMethod='scale') !important;
+    }
+
+.procurement .landing__header {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/procurement.png',
+        sizingMethod='scale');
+
+        -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/procurement.png',
+        sizingMethod='scale') !important;
+    }
+
+.specialist-healthcare .landing__header {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/specialist-healthcare.png',
+        sizingMethod='scale');
+
+        -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/specialist-healthcare.png',
+        sizingMethod='scale') !important;
+    }
+
+.practitioner .landing__header {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/practitioner-services.png',
+        sizingMethod='scale') !important;
+
+        -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/practitioner-services.png',
+        sizingMethod='scale') !important;
+    }
+
+.counter-fraud .landing__header {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/counter-fraud.png',
+        sizingMethod='scale');
+
+        -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/counter-fraud.png',
+        sizingMethod='scale') !important;
+    }
+
+.data-intelligence .landing__header {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/data-intelligence.png',
+        sizingMethod='scale');
+
+        -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/data-intelligence.png',
+        sizingMethod='scale') !important;
+    }
+
+.health-protection .landing__header {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/health-protection.png',
+        sizingMethod='scale');
+
+        -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/health-protection.png',
+        sizingMethod='scale') !important;
+    }
+
+.programme-management .landing__header {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/programme-management.png',
+        sizingMethod='scale');
+
+        -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/programme-management.png',
+        sizingMethod='scale') !important;
+    }
+
+.logistics .landing__header {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/logistics.png',
+        sizingMethod='scale');
+
+        -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='/_/dist/images/logistics.png',
+        sizingMethod='scale') !important;
+    }
+
+
+
+
+.module__header a, 
+.all-over .module__header, 
+.article .module__header {
+        margin-left: -20px !important;
+        width:110% !important;
+    }
+
+.article .module__header {
+    width:100% !important;
+    margin-left:0 !important;
+}
+
+.landing__extra li {
+    border-bottom: 1px dotted $dark-blue !important;
+    padding: 0.5em 0 !important;
+}
+
+.landing__extra li.module {
+    border-bottom:0 none !important;
+    padding: 0.5em 0 !important;
+    &.col.padded {
+        padding-left: ($fallback-gutter/2) !important;
+        padding-right: ($fallback-gutter/2) !important;
+    }
+}
+
+.landing__extra li.module.slvzr-hover {
+    border-bottom: 1px solid $grey !important;
+}
+
+.blog .sidebar {
+    clear: none !important;
+    }
+
+.fader-item {
+    display: none;
+    }
+
+.fader-item:first-child, 
+.fader-item.slvzr-first-child {
+    display: block;
+    opacity:1;
+    z-index:2;
+    position: relative;
+    }
+
+
+[class^="icon-"]:before, 
+[class*=" icon-"]:before,
+[class^="icon-"].after:after, 
+[class*=" icon-"].after:after {
+	display: inline-block;
+	font-family: "fontello";
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	margin-right: .5em;	
+	speak: none;
+	text-align: center;
+	text-decoration: none;
+	text-transform: none;
+	vertical-align: baseline;
+	}
+	
+[class^="icon-"].after:after, 
+[class*=" icon-"].after:after {
+	padding-left: .5em;
+	margin-right: 0;	
+	}
+
+.icon-angle-right.after:after { content: '\e802'; } /* '' */
+.icon-angle-right.after:before { content: ''; } /* '' */
+
+.icon-twitter:before { content: '\e800'; } /* '' */
+.icon-search:before { content: '\e801'; } /* '' */
+.icon-angle-right:before { content: '\e802'; } /* '' */
+.icon-right-open:before { content: '\e803'; } /* '' */
+.icon-linkedin-squared:before { content: '\e804'; } /* '' */
+.icon-home:before { content: '\e805'; } /* '' */
+.icon-angle-left:before { content: '\e806'; } /* '' */
+.icon-external:before { content: '\e807'; } /* '' */
+.icon-phone:before { content: '\e808'; } /* '' */
+.icon-mobile:before { content: '\e809'; } /* '' */
+.icon-mail:before { content: '\e80a'; } /* '' */
+.icon-commerical-building:before { content: '\e80b'; } /* '' */
+.icon-chat:before { content: '\e80c'; } /* '' */
+.icon-download:before { content: '\e80d'; } /* '' */
+.icon-checked:before { content: '\e80e'; } /* '' */
+.icon-unchecked:before { content: '\e810'; } /* '' */
+
+.js .js-job__extras {
+    display:block
+}
+
+.careers__specialisms .bg {
+    background-position-y:30px;
+}
+.search-results__list li {
+    @include clearfix;
+    position:relative;
+    }
+.search-results__list .ghost-center {
+    position:absolute;
+    right:0;
+    top: 4.5em;
+    }
+
+/* styles to expand out collapsible and hide icons */
+
+.collapsible-trigger{
+    .icon {
+        display: none;
+    }
+}
+
+[class*=on--collapsible]{
+    [aria-expanded=true].collapsible-trigger .icon {
+        display: inline-block;
+    }
+}
+
+.collapsible-section {
+    overflow: visible;
+    max-height: 2000px;
+    padding: 1.5rem;
+    padding: 20px;
+}	

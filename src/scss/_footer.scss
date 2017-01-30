@@ -1,0 +1,115 @@
+.footer__nuggets {
+    border-top: 1px solid $grey;
+    clear:both;
+    }
+
+.footer__nuggets .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    }
+
+.footer__nugget {
+	font-size: 0.8em;
+    }
+
+.footer__nugget a {
+    &:hover, &:focus, &:active {
+        text-decoration: none;
+        h2 {
+            text-decoration: underline;
+            }
+        }
+    }
+
+.footer__nugget h2 {
+    margin-bottom: 0.5em;
+    }
+
+.nugget__img {
+    border: 1px solid $light-blue;
+    border-radius: 100px;
+    float: left;
+    margin-bottom: 3em;
+    padding: 7px;
+    width: 30%;
+    }
+
+.footer__nugget img {
+    border-radius: 100px;
+    }
+
+.nugget__info {
+    float: right;
+    width: 65%;
+    }
+
+.footer__nugget:nth-child(2) img {
+    border-color: #7DC048;
+    }
+
+.footer__nugget:nth-child(3) img {
+    border-color: #F4922D;
+    }
+
+.footer__nugget p {
+    color: #000;
+    }
+
+[role="contentinfo"] {
+    background: $dark-blue;
+    color: #fff;
+    font-size: 0.8em;
+    }
+
+[role="contentinfo"] h2:before {
+    @media (min-width: $breakpoint-medium) {
+        display: none;
+        }
+    }
+
+[role="contentinfo"] h2 {
+    color: $light-blue;
+    cursor: pointer;
+    margin-bottom: 0.5em;
+    @media (min-width: $breakpoint-medium) {
+        cursor: default;
+        }
+    }
+
+[role="contentinfo"] a {
+    color: #ddd;
+    }
+
+[role="contentinfo"] .nhs-logo {
+    display: none;
+    @media (min-width: $breakpoint-medium) {
+        display: block;
+        padding-top: 0.5em;
+        text-align: right;
+        }
+    }
+
+[role="contentinfo"] ul {
+    transition:max-height 160ms ease;
+    }
+
+[role="contentinfo"] ul li {
+    margin-bottom: 1em;
+    @media (min-width: $breakpoint-medium) {
+        margin-bottom: 0;
+        }
+    }
+
+.js-footer-toggle + ul {
+    @media (max-width: $breakpoint-medium) {
+        max-height:0;
+        overflow:hidden;
+        }
+    }
+
+.js-footer-toggle--on + ul {
+    @media (max-width: $breakpoint-medium) {
+        max-height:1000px;
+        }
+    }

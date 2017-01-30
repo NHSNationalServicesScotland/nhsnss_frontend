@@ -1,0 +1,35 @@
+html {
+	background: $background;
+	}
+
+body {
+	background: #fff;
+	margin: 0 auto;
+	max-width: 1350px;
+	}
+
+main {
+	background: #fff;
+	position: relative;
+	z-index: 2;
+	}
+
+img {
+	height: auto;
+	max-width: 100%;
+	}
+
+a {
+	color: $light-blue; 
+	text-decoration: none;
+	transition: background-color 0.3s linear, color 0.3s linear, border 0.3s linear;
+	&:hover, &:focus, &:active {
+		color: $dark-blue; 
+		text-decoration: underline;
+		}
+	}
+
+.away {
+	left: -9999em;
+	position: absolute;
+	}

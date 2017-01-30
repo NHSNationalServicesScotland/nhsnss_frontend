@@ -1,0 +1,42 @@
+.button {
+	background: $light-blue;
+	border-radius: 4px;
+	color: #fff;
+	display: inline-block;
+	padding: 0.5em 0.75em;
+	text-align: center; 
+	transition: background-color 0.3s linear, color 0.3s linear;
+	@media (min-width: $breakpoint-large) {
+	    padding: 0.75em 1em; 
+	    }
+	&:hover, &:focus, &:active {
+		background: $dark-blue;
+		color: #fff;
+		text-decoration: none;
+		}
+	}
+
+.button i:before {
+	margin-left: 0.5em;
+	margin-right: 0;
+	}
+
+.button--small {
+	font-size:.8em;
+	line-height:1.3;
+	padding: 0.25em 0.5em;
+	@media (min-width: $breakpoint-large) {
+	    padding: 0.33em .66em; 
+	    }
+	}
+.button--outline {
+	background: #fff;
+	border:1px solid $light-blue;
+	color: $light-blue;
+	&:hover, &:focus, &:active {
+		background: #fff;
+		border-color:shade($light-blue, 25%);
+		color: $light-blue;
+		text-decoration: none;
+		}
+	}

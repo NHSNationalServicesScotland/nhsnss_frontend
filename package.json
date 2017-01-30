@@ -1,0 +1,52 @@
+{
+  "name": "nhsnss_frontend",
+  "version": "0.1.0",
+  "description": "Frontend toolkit used to build services for nhssnss.org",
+  "repository": "",
+  "author": "neilha",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.6.5",
+    "del": "^0.1.1",
+    "extname": "^0.1.5",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^0.0.8",
+    "browserify": "^11.1.0",
+    "gulp-cache": "^0.2.9",
+    "gulp-concat": "^2.5.2",
+    "gulp-data": "^1.2.0",
+    "gulp-debug": "^2.0.1",
+    "gulp-extname": "^0.2.0",
+    "gulp-favicons": "^1.0.9",
+    "gulp-front-matter": "^1.2.2",
+    "gulp-header": "^1.2.2",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jshint": "^1.10.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-pixrem": "0.1.1",
+    "gulp-plumber": "^1.0.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-swig": "^0.7.4",
+    "gulp-uglify": "^0.3.1",
+    "gulp-if": "^2.0.1",
+    "gulp-util": "^3.0.7",	
+    "http-server": "^0.6.1",
+    "psi": "^1.0.6",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "run-sequence": "^1.1.0",
+    "watchify": "^3.3.1"
+  },
+  "jshintConfig": {
+    "predef": [
+      "document",
+      "window"
+    ]
+  },
+  "dependencies": {
+	"jquery": "^1.12.0"
+  }
+}

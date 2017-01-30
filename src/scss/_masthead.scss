@@ -1,0 +1,325 @@
+.beta-strip {
+    background: #f7f5d7;
+    font-size: 0.8em;
+    padding: 0.25em;
+    text-align: center;
+    }
+
+.gradient {
+    background: $dark-blue;
+    background: linear-gradient(to right, $light-blue 0%,$dark-blue 100%);
+    height: 10px;
+    }
+
+.skip-link.away:focus {
+    background: #fff;
+    left: 1em !important;
+    padding: 0.5em;
+    z-index: 999;
+    }
+
+[role="banner"] {
+    background: $dark-blue;
+    @media (min-width: $breakpoint-large) {
+        margin-bottom: 1em;
+        }
+    }
+
+.logo {
+    line-height: 1.2;
+    margin-top: 12px;
+    @media (min-width: $breakpoint-large) {
+        margin-top: 1.5em;
+        }
+    }
+
+.logo a {
+    color: #fff;
+    margin-right: 1em;
+    font-size: 0.85em;
+    @media (min-width: 30em) {
+        font-size: 1.35em;
+        }
+    @media (min-width: $breakpoint-large) {
+        font-size: 1.6em;
+        }
+    @media (min-width: $breakpoint-xlarge) {
+        font-size: 2em;
+        }
+    &:hover, &:focus, &:active {
+        color: #ccc;
+        text-decoration: none;
+        }
+    }
+
+[role="banner"] .nhs-logo {
+    margin-bottom: 0.6em;
+    margin-top: 1em;
+    text-align: right;
+    @media (min-width: $breakpoint-medium) {
+        margin-bottom: 0;
+        margin-top: 1.2em;
+        }
+    }
+
+.nhs-logo a {
+    text-align: right;
+    &:hover, &:focus, &:active {
+        path {
+            fill: #ccc;
+            }
+        }
+    }
+
+.nhs-logo img,
+.nhs-logo svg {
+    height: 46px;
+    width: 45px;
+    @media (min-width: $breakpoint-medium) {
+        height: 72px;
+        margin-right: -8px;
+        width: 70px;
+        }
+    @media (min-width: $breakpoint-xlarge) {
+        height: 82px;
+        margin-right: -10px;
+        width: 80px;
+        }
+    }
+
+.st0 {
+    fill: #FFFFFF;
+    }
+
+.js .expander {
+    display: none;
+    @media (min-width: $breakpoint-medium) {
+        display: block;
+        }
+    }
+
+.js .expander.show {
+    display: block;
+    }
+
+.expanding-nav__toggle,
+.expanding-search__toggle {
+    color: #fff;
+    padding-bottom: 0.75em;
+    padding-top: 0.75em;
+    &:hover, &:focus, &:active {
+        color: #fff;
+        text-decoration: none;
+        }
+    @media (min-width: $breakpoint-medium) {
+        display: none;
+        }
+    }
+
+[role="search"] {
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+    position: relative;
+    @media (min-width: $breakpoint-medium) {
+        margin-bottom: 2em;
+        margin-top: 1.5em;
+        }
+    @media (min-width: $breakpoint-large) {
+        margin-bottom: 2em;
+        margin-top: 1.5em;
+        }
+    }
+
+[role="search"] i {
+    color: darken($grey,10%);
+    left: 0.25em;
+    position: absolute;
+    top: 0.3em;
+    @media (min-width: $breakpoint-large) {
+        left: 0.5em;
+        top: 0.6em;
+        }
+    }
+
+[role="search"] input {
+    background: #efefef;
+    border-radius: 4px;
+    font-size: 0.8em;
+    height: 34px;
+    font-size: 16px;
+    line-height: 34px;
+    padding-left: 1.8em;
+    padding-right: 6em;
+    transition: all 0.1s linear;
+    width: 100%;
+    @media (min-width: $breakpoint-large) {
+        height: 44px;
+        line-height: 44px;
+        padding-left: 2.4em;
+        }
+    &:hover, &:focus, &:active {
+        background: #fff;
+        font-size: 1em;
+        height: 42px;
+        margin-bottom: -4px;
+        margin-top: -4px;
+        margin-left: -4px;
+        margin-right: -4px;
+        width: 100%;
+        width: calc(100% + 8px);
+        @media (min-width: $breakpoint-large) {
+            height: 52px;
+            }
+        }
+    }
+@media screen and (min-width:0\0) and (min-resolution:.001dpcm) {
+//ie9 hack
+    [role="search"] input {
+        padding-right:0;
+        padding-left:0;
+        border-right:6em solid white;
+        border-left:2em solid white;
+    }
+}
+
+[role="search"] .button:before {
+    margin-right: 0;
+    }
+
+[role="search"] .button {
+    border-radius: 3px;
+    bottom: 3px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0 0.75em;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    transition: all 0.1s linear;
+    @media (min-width: 30em) {
+        font-size: 1em;
+        }
+    @media (min-width: $breakpoint-medium) {
+        font-size: 0.9em;
+        }
+    @media (min-width: 50em) {
+        font-size: 1em;
+        }
+    @media (min-width: $breakpoint-large) {
+        padding-left: 1em;
+        padding-right: 1em;
+        }
+    }
+
+[role="search"] input {
+    &:hover, &:focus, &:active {
+        & + .button {
+            bottom: -1px;
+            line-height: 36px;
+            right: -1px;
+            top: -1px;
+            @media (min-width: $breakpoint-large) {
+                line-height: 44px;
+                }
+            }
+        }
+    }
+
+[role="navigation"] ul {
+    @media (max-width: $breakpoint-medium) {
+        margin-bottom: 0.5em;
+        }
+    @media (min-width: $breakpoint-medium) {
+        margin-left: 0;
+        }
+    @media (min-width: $breakpoint-large) {
+        margin-left: -0.6em;
+        }
+    @media (min-width: $breakpoint-xlarge) {
+        margin-left: -0.6em;
+        }
+    }
+
+[role="navigation"] li {
+    @media (min-width: $breakpoint-medium) {
+        float: left;
+        }
+    }
+
+[role="navigation"] li a {
+    border-radius: 8px 8px 0 0;
+    color: #fff;
+    display: block;
+    font-size: 0.9em;
+    margin-right: 1px;
+    padding: 10px 0 10px 0;
+    transition: none;
+    @media (min-width: $breakpoint-medium) {
+        padding: 14px 5px 10px 5px;
+        }
+    @media (min-width: $breakpoint-large) {
+        font-size: 1.2em;
+        padding: 14px 15px 10px 15px;
+        }
+    @media (min-width: $breakpoint-xlarge) {
+        font-size: 1.2em;
+        padding: 14px 1.5em;
+        }
+    @media (min-width: $breakpoint-medium) {
+        &.active, &:hover, &:focus, &:active {
+            background: #fff;
+            border-top: 4px solid $light-blue;
+            color: $light-blue;
+            outline: 0;
+            padding-top: 10px;
+            text-decoration: none;
+            }
+        &:hover, &:focus {
+            background: #efefef;
+            }
+        &.active {
+            &:hover, &:focus {
+                background: #fff;
+                }
+            }
+        }
+    }
+
+[role="navigation"] li.expanding-search__toggle a {
+    &:hover, &:focus, &:active {
+        background: transparent;
+        color: #fff;
+        border-top: 0;
+        padding-top: 14px;
+        }
+    }
+
+.masthead__follow {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    @media (min-width: $breakpoint-medium) {
+        margin-bottom: 0;
+        margin-top: 0.4em;
+        text-align: right;
+        }
+    @media (min-width: $breakpoint-large) {
+        font-size: 1.6em;
+        margin-top: 0.3em;
+        }
+    }
+
+.masthead__follow a:before {
+    margin-right: 0;
+    }
+
+.masthead__follow a {
+    color: #fff;
+    margin-left: 1em;
+    &:hover, &:focus, &:active {
+        color: #ccc;
+        }
+    }
+
+.masthead__follow a:first-child {
+    margin-left: 0;
+    }

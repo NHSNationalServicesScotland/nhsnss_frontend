@@ -1,0 +1,101 @@
+label {
+    display:inline-block;
+    margin-bottom:5px;
+}
+.form li, 
+.article .form li {
+	list-style-type: none;
+	margin-left: 0;
+	margin-bottom: 1.5em;
+	}
+
+.form input, 
+.form textarea {
+	border: 1px solid $grey;
+	border-radius: 4px;
+	display: block;
+	line-height: 1.1;
+	max-width: 500px;
+	padding: 0.5em;
+	transition: all 0.2s linear;
+	width: 100%;
+	&:hover, &:focus {
+		border-color: darken($grey,20%);
+		}
+	}
+
+.check {
+	max-width: 500px;
+	}
+
+.form input[type="checkbox"] {
+	display: inline-block;
+	margin-right: 0.25em;
+	width: auto;
+	}
+
+.form input[type="submit"] {
+	border: 0;
+	line-height: 1.4;
+	}
+
+.form textarea {
+	line-height: 1.2;
+	min-height: 7em;
+	}
+
+.form select {
+	display: block;
+	max-width: 500px;
+	width: 100%;
+    line-height:1.1em;
+	}
+
+.form fieldset {
+	margin-top: 3em;
+	}
+
+.form legend {
+	display: block;
+	font-size: 1.1em;
+	margin-bottom: 1em;
+	}
+
+.js .form__logic-section--off {
+	display: none;
+	}
+
+.js .form__logic-section--off.show {
+	display: block;
+	}
+
+.forrm-row.forrm-error {
+	input, 
+	textarea {
+    	border-color: #a94442;
+		}
+	}
+
+.forrm-error-message,
+.field-validation-error, 
+.error-message {
+    background: #f2dede;
+    border: 1px solid #ebccd1;
+    color: #a94442;
+    display: block;
+    margin-top: 0.5em;
+    padding: 0.5em;
+	}
+
+.forrm-error-message,
+.field-validation-error {
+    max-width: 500px;
+	}
+
+.success-message {
+    background: #dff0d8;
+    border: 1px solid #d6e9c6;
+    color: #3c763d;
+    display: block;
+    padding: 0.5em;
+	}

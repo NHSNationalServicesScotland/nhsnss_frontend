@@ -1,0 +1,17 @@
+.pagination {
+	color: #ccc;
+	}
+
+.pagination__prev, 
+.pagination__next {
+    float: left;
+    }
+
+.pagination__next {
+    float: right;
+    }
+
+.pagination__next i:before {
+	margin-left: 0.5em;
+	margin-right: 0;
+	}

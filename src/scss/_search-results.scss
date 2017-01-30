@@ -1,0 +1,133 @@
+.search-results .landing__header {
+	margin-bottom: 0;
+	}
+
+.search-results__filter {
+	color: #3F4C51;
+	display: inline-block;
+	margin-right: 1em;
+	}
+
+.search-results__filter:first-child {
+	margin-left: 1em;
+	}
+
+.search-results__filter:before {
+	color: darken($grey,40%);
+	margin-right: 0.35em;
+	}
+
+.search-results__filter.disabled:before {
+	color: darken($grey,20%);
+	}
+
+.search-results__disclaimer {
+	background: #f7f5d7;
+	display: inline-block;
+    font-size: 0.8em;
+    margin-top: 1em;
+    padding: 0.5em;
+	}
+
+.search-results__list li {
+    border-bottom: 1px #ccc solid;
+    margin-bottom: 20px;
+    padding-bottom: 1.5em;
+    padding-top: 1.5em;
+}
+
+.search-results__list li ol {
+    list-style: decimal;
+    margin: 0 0 0px 20px;
+        
+    li {
+        border: 0;
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
+}
+
+.search-results__list li ul {
+    list-style: disc;
+    margin: 0 0 0px 20px;
+
+     li {
+        border: 0;
+        padding-bottom: 0px;
+        padding-top: 0px;
+     }
+}
+
+.search-results__list a {
+    &:hover, &:focus, &:active {
+        text-decoration: none;
+        h2 {
+			text-decoration: underline;
+        	}
+        p {
+			color: #000;
+        	}
+		}
+	}
+
+.search-results__list__thumb {
+    margin-bottom:0.5em;
+	@media (min-width: $breakpoint-large) {
+	    margin: 0.25em 0 0.5em 1em;
+	    float: right;
+	    max-width: 275px;
+        width:auto;
+	    }
+	}
+
+.search-results__list .breadcrumbs {
+	color: #3F4C51;
+	padding-top: 0;
+	}
+
+.search-results__list__description {
+    color: #3F4C51;
+    }
+
+.search-results__list h2 {
+	margin-bottom: 0.25em;
+	margin-top: 0.2em;
+	}
+
+.search-results__list p {
+	margin-bottom: 0;
+	}
+
+.search-results__list__document {
+	color:#888; 
+	display:block; 
+	font-size:.8em; 
+	margin:.5em 0 1em 0
+	}
+.ghost-center {
+    clear:none !important;
+}
+.ghost-center::before {
+    content: " ";
+    height: 100%;
+    width: 1%;
+}
+.ghost-center::before, .ghost-center__item {
+    display: inline-block;
+    vertical-align: middle;
+}
+.ghost-center::after {
+    @media (min-width: $breakpoint-medium){
+        border-left: 1px solid $grey;
+    }
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1px;
+}
+.ghost-center {
+    position: relative;
+    text-align: center;
+}
