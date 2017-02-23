@@ -22,9 +22,12 @@ Javascript modules can be specified in markup using `data-` attributes:
 </div>
 ```
 
-Modules can be found and started by including `govuk/modules.js` and running:
+Modules can be found and started by running:
 
 ```javascript
+var $ = global.jQuery;
+var NHSNSS = global.NHSNSS || {};
+
 $(document).ready(function(){
 	NHSNSS.modules.start();
 }); 
@@ -54,7 +57,9 @@ The simplest module looks like:
 ```javascript
 ;(function(global) {
   'use strict'
-
+  var NHSNSS = global.NHSNSS || {}
+  NHSNSS.Modules = NHSNSS.Modules || {}
+  
   NHSNSS.Modules.SomeModule = function() {
     this.start = function(element) {
       // module code
