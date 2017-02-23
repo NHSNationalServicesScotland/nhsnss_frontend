@@ -147,7 +147,7 @@ gulp.task('sass', function () {
           .pipe(pixrem())
           .pipe(header(banner, {pkg : pkg}))
           .pipe(sourcemaps.write())
-          .pipe(gulpIf(!!gulpUtil.env.production, minifyCss()))
+          .pipe(minifyCss())
           .pipe(gulp.dest(dest.css));
 });
 
