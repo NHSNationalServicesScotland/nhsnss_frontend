@@ -2,7 +2,6 @@
 /* Require the gulp and node packages */
 var gulp = require('gulp'),
     pkg = require('./package.json'),
-    del = require('del'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     concat = require('gulp-concat'),
@@ -14,22 +13,10 @@ var gulp = require('gulp'),
     swig = require('gulp-swig'),
     frontMatter = require('gulp-front-matter'),
     data = require('gulp-data'),
-    pagespeed = require('psi'),
-    extname = require('gulp-extname'),
     sourcemaps = require('gulp-sourcemaps'),
-    browserSync = require('browser-sync'),
-    reload = browserSync.reload,
-    path = require('path'),
-    browserify = require('browserify'),
-    watchify = require('watchify'),
-    cache = require('gulp-cache'),
     imagemin = require('gulp-imagemin'),
     notify = require('gulp-notify'),
     plumber = require('gulp-plumber'),
-    debug = require('gulp-debug'),
-    runSequence = require('run-sequence'),
-    source = require('vinyl-source-stream'),
-    buffer = require('vinyl-buffer'),
     jshint = require('gulp-jshint'),
     gulpIf = require('gulp-if'),
     gulpUtil = require('gulp-util'),
@@ -109,19 +96,13 @@ gulp.task('lint', function() {
 		.pipe(jshint.reporter('default'));
 });
 
-gulp.task('js:browserify', function () {
-  var b = browserify({
-    entries: src.js + 'app.js',
-    debug: true
-  });
-  
-  return b.bundle()
-    .pipe(source('app.js'))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(dest.js));	
+gulp.task('js:concat', function () {
+  return gulp.src([src.js + 'modules.js', src.js + 'modules/**/*.js', src.js + 'app.js'])
+    .pipe(concat('app.js'))
+    .pipe(gulp.dest(dest.js))
+	.pipe(uglify())
+	.pipe(rename({suffix: '.min'}))
+	.pipe(gulp.dest(dest.js));
 });
 
 gulp.task('js:async', function () {
@@ -134,7 +115,7 @@ gulp.task('js:vendor', function () {
   		.pipe(gulp.dest(dest.js + 'vendor/'));
 });
 
-gulp.task('js', ['js:browserify', 'js:async', 'js:vendor']);
+gulp.task('js', ['js:concat', 'js:async', 'js:vendor']);
 
 /* Build the flat html */
 gulp.task('html', function(){
@@ -189,43 +170,9 @@ gulp.task('font', function() {
         .pipe(gulp.dest(dest.fonts));
 });
 
-/* Server with auto reload and browersync */
-gulp.task('serve', ['build'], function () {
-      browserSync({
-        notify: false,
-        // https: true,
-        server: [outputDir],
-        tunnel: false
-      });
-
-      gulp.watch([src.html + '**/*.html'], ['html', reload]);
-      gulp.watch([src.css + '**/*.scss'], ['css', reload]);
-      gulp.watch([src.img + '**/*'], ['img', reload]);
-      gulp.watch([src.js + '**/*'], ['js', reload]);
-});
-
-/* Watch */
-gulp.task('watch', function () {
-      gulp.watch([src.html + '**/*.html'], ['html']);
-      gulp.watch([src.css + '**/*.scss'], ['css']);
-      gulp.watch([src.img + '**/*'], ['img']);
-      gulp.watch([src.js + '**/*'], ['js']);
-});
-
-/* Page speed insights */
-gulp.task('psi', function(cb) {
-  pagespeed.output(publicUrl, {
-    strategy: psiStrategy,
-  }, cb);
-});
-
-
 /************************
  *  Task API
  ************************/
-/* Start task */
-gulp.task('start', ['html', 'css', 'js', 'img', 'font', 'watch']);
-
 /* Final build task including compression */
 gulp.task('build', ['html', 'css', 'js', 'img', 'font']);
 
