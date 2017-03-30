@@ -1,0 +1,131 @@
+.intro {
+	font-size: 1.3em;
+	}
+
+.article__section {
+	background: $grey;
+    padding: 0.5em;
+	}
+
+.article h2 {
+	font-size: 1.6em;
+	line-height: 1.1;
+	margin-bottom: 0.5em;
+	}
+
+.article h2:not(:first-child) {
+	margin-top: 2em;
+	}
+
+.article h3 {
+	color: #555;
+	font-size: 1.2em;
+	line-height: 1.1;
+	margin-bottom: 0.5em;
+	margin-top: 1em;
+	}
+
+.article h4 {
+	color: #555;
+	line-height: 1.1;
+	margin-bottom: 0.5em;
+	margin-top: 1em;
+	}
+
+.article ul li, 
+.article ol li {
+	list-style-type: disc;
+	margin-bottom: 0.5em;
+	margin-left: 1.2em;
+	}
+
+.article ol li {
+	list-style-type: decimal;
+	margin-left: 1.4em;
+	}
+
+.article hr {
+	background: $grey;
+	display: block;
+	height: 1px;
+	margin: 2em 0;
+	}
+
+.article .button {
+	margin-top: 1em;
+    text-transform:none;
+	}
+
+.article .download {
+	border: 1px solid $grey;
+	padding: 1em;
+	}
+
+.article .image--full-width {
+    margin-bottom: 0.75em;
+
+    img {
+        width: 100%;
+    }
+}
+
+.article .image--left-aligned {
+	@media (min-width: $breakpoint-small) {
+	    float: left;
+		margin: 0.25em 2% 2% 0;
+		width: 48%;
+	    }
+	@media (min-width: $breakpoint-large) {
+		width: 30%;
+	    }
+	}
+
+.article .image--right-aligned {
+	@media (min-width: $breakpoint-small) {
+	    float: right;
+		margin: 0.25em 0 2% 2%;
+		width: 48%;
+	    }
+	@media (min-width: $breakpoint-large) {
+		width: 30%;
+	    }
+	}
+
+.article iframe {
+	margin-bottom: 1em;
+	margin-top: 1em;
+	max-width: 100%;
+	}
+
+.article .fluidvids {
+	margin-bottom: 2.5em;
+	}
+
+.article__contact {
+	@media (max-width: $breakpoint-large) {
+	    margin-top: 1em;
+	    }
+	}
+
+.article__contact p {
+	margin-bottom: 0;
+	}
+
+.module__body .article__sbu {
+	display: block;
+	line-height: 1.2;
+	margin-bottom: 1.5em;
+	}
+
+.article__sbu.sbu--snbts {
+	background: url(../images/snbts-logo.png) left top no-repeat;
+	background: url(../images/snbts-logo.svg) left top / 67px 55px no-repeat, none;
+	max-width: 300px;
+	min-height: 55px;
+	padding-left: 80px;
+	padding-top: 0.5em;
+	}
+
+.more-services {
+	border-top: 1px solid $grey;
+	}

@@ -33,3 +33,7 @@ a {
 	left: -9999em;
 	position: absolute;
 	}
+	
+.visuallyhidden{
+	@include visuallyhidden
+}		
