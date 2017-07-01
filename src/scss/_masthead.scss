@@ -53,11 +53,10 @@
     }
 
 [role="banner"] .nhs-logo {
-    margin-bottom: 0.6em;
+    margin-bottom: 0.75em;
     margin-top: 1em;
     text-align: right;
     @media (min-width: $breakpoint-medium) {
-        margin-bottom: 0;
         margin-top: 1.2em;
         }
     }
@@ -88,6 +87,10 @@
     }
 
 .brand {
+	margin-top: 1em;
+}
+
+.brand p {
     border-left: 2px solid #0391bf;
     padding-left:0.75em;
 }
